@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container } from "react-bootstrap"
+import { Navbar, Nav, Container, NavbarBrand } from "react-bootstrap"
 import { useNavigate } from 'react-router';
 import PropTypes from 'prop-types'
 
@@ -12,7 +12,7 @@ const NavBar = ({ alive, dead, all }) => {
     return (
         <Navbar bg="light">
             <Container>
-                <Navbar.Brand style={{cursor:"pointer"}} onClick={() => history(`/`)}>
+                <Navbar.Brand style={{ cursor: "pointer" }} onClick={() => history(`/`)}>
                     <img
                         src={logo}
                         width="95px"
@@ -21,9 +21,7 @@ const NavBar = ({ alive, dead, all }) => {
                     />
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link onClick={all}>All</Nav.Link>
-                    <Nav.Link onClick={alive}>Alive</Nav.Link>
-                    <Nav.Link onClick={dead}>Dead</Nav.Link>
+                    <NavbarBrand>COVID LIVE</NavbarBrand>
                 </Nav>
             </Container>
         </Navbar>
